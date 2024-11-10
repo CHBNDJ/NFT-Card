@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html {
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0D192C;
+    font-family: "Outfit", sans-serif;
+}
+
+.main-container {
+    width: 350px;
+    height: 596px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #15263F;
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.0953);
+}
+
+.img-logo {
+    width: auto;
+    height: 302px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; 
+   
+}
+
+.img-logo img {
+    width: 100%;
+    height: 302px;
+    border-radius: 8px;
+    display: block;
+}
+
+.img-logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00FFF8; 
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.img-logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="48" height="48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h48v48H0z"/><path d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z" fill="%23FFF" fill-rule="nonzero"/></g></svg>');
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-logo:hover::after {
+    opacity: 0.5; 
+}
+
+.img-logo:hover::before {
+    opacity: 1;
+}
+
+.text-number {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.text-number:hover {
+    color: #00FFF8;
+}
+
+.text-description {
+    color: #8BACD9;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.quantity-clock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 301px;
+    height: 20px;
+}
+
+.quantity,
+.time-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.quantity span {
+    color: #00FFF8;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.img-clock {
+    width: 16px;
+    height: 16px;
+}
+
+.time-left span {
+    color: #8BACD9;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.horizontal {
+    border: 1px solid #2E405A;
+    width: 302px;
+}
+
+.profil-creator {
+    width: 230px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.img-profil {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.profil-creator-of {
+    width: 181px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.profil-creator-of p {
+    color: #8BACD9;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.profil-creator-of span {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.profil-creator-of span:hover {
+    color: #00FFF8;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767.98px) {
+
+
+    body,html {
+        width: 100%;
+        height: 667px;
+    }
+    
+    .main-container {
+        width: 327px;
+        height: 543px;
+        gap: 1em;
+    }
+    
+    .img-logo {
+        width: auto;
+        height: 278px;
+        border-radius: 8px;
+    }
+
+    .quantity-clock {
+        width: 278px;
+        height: 19px;
+    }
+
+    .profil-creator {
+        width: 219px;
+    }
+
+    .profil-creator-of p {
+        font-size: 15px;
+    }
+    
+    .profil-creator-of span {
+        font-size: 15px;
+    }
+
+
+}
